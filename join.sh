@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec -it vlingo-auth  bash $*
+docker exec -it keycloak  bash $*

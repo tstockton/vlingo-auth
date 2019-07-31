@@ -3,7 +3,7 @@ version: '3'
 services:
   keycloak:
     image: jboss/keycloak
-    container_name: vlingo-auth
+    container_name: keycloak
     restart: always
     environment:
       DB_VENDOR: h2
@@ -13,3 +13,8 @@ services:
       KEYCLOAK_PASSWORD: kalele#luna
     ports:
       - "8080:8080"
+    volumes:
+      - ./vlingo-auth:/configure
+
+volumes:
+  vlingo-auth:
