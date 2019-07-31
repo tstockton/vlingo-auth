@@ -59,7 +59,7 @@
         "composite": true,
         "composites": {
           "client": {
-            "dxc": [
+            "auth": [
               "event.consume",
               "case.all"
             ]
@@ -330,7 +330,7 @@
           "containerId": "73b5f512-032f-46ba-8009-210afdf0c131"
         }
       ],
-      "dxc": [
+      "auth": [
         {
           "id": "8c17c491-ba53-4570-86fe-6490169c2fef",
           "name": "event.get",
@@ -384,7 +384,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "doc.reclassify"
               ]
             }
@@ -400,7 +400,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "event.get",
                 "event.ack"
               ]
@@ -417,7 +417,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "case.state",
                 "case.invite",
                 "case.append",
@@ -450,7 +450,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "participant.admin"
               ]
             }
@@ -493,7 +493,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "event.get",
                 "event.send",
                 "event.ack"
@@ -511,7 +511,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "dxc": [
+              "auth": [
                 "event.send"
               ]
             }
@@ -575,7 +575,7 @@
       "attributes": {},
       "realmRoles": [],
       "clientRoles": {
-        "dxc": [
+        "auth": [
           "case.all"
         ]
       },
@@ -593,7 +593,7 @@
   "requiredCredentials": [
     "password"
   ],
-  "passwordPolicy": "hashIterations(20000) and length(8) and lowerCase(1) and upperCase(1) and specialChars(1) and notUsername(1) and passwordHistory(3) and digits(1)",
+  "passwordPolicy": "hashIterations(20000) and length(8) and lowerCase(1) and upperCase(1) and specialChars(1) and notUsername(1) and passwordHistory(3)",
   "otpPolicyType": "totp",
   "otpPolicyAlgorithm": "HmacSHA1",
   "otpPolicyInitialCounter": 0,
@@ -609,7 +609,7 @@
       "id": "73b5f512-032f-46ba-8009-210afdf0c131",
       "clientId": "account",
       "name": "${client_account}",
-      "baseUrl": "/auth/realms/dxc-externals/account",
+      "baseUrl": "/auth/realms/vlingo-internal/account",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -619,7 +619,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/auth/realms/dxc-externals/account/*"
+        "/auth/realms/vlingo-internal/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -968,8 +968,8 @@
     },
     {
       "id": "742fdbe8-4e6c-4948-881a-432634982139",
-      "clientId": "dxc",
-      "name": "dxc",
+      "clientId": "auth",
+      "name": "auth",
       "description": "DXC API access client",
       "surrogateAuthRequired": false,
       "enabled": true,
@@ -1218,13 +1218,13 @@
       "id": "f00b2500-5f80-47c5-804e-ecf08ffac3cb",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/dxc-externals/console/index.html",
+      "baseUrl": "/auth/admin/vlingo-internal/console/index.html",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/auth/admin/dxc-externals/console/*"
+        "/auth/admin/vlingo-internal/console/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -1363,7 +1363,7 @@
   },
   "smtpServer": {
     "host": "127.0.0.1",
-    "from": "dxc-externals.donotreply@maxird.com",
+    "from": "vlingo-internal.donotreply@maxird.com",
     "port": "25"
   },
   "eventsEnabled": true,

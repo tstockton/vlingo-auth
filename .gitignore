@@ -1,4 +1,7 @@
 # General
+kill
+start
+*dxc*.yml
 bin/
 target/
 .classpath

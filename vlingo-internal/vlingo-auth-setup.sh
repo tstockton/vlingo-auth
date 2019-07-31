@@ -13,7 +13,7 @@ sleep 40
 url=http://${server}:8080/auth
 
 export PATH=$PATH:/opt/jboss/keycloak/bin
-export VLINGO_PASSWORD=limahana#kalele
+export VLINGO_PASSWORD=Limahana#kalele
 
 echo 'Authenticating admin...'
 kcadm.sh config credentials \
@@ -89,4 +89,4 @@ function set_fixed_key
 
 set_fixed_key vlingo-internal
 
-generate_user vlingo-internal system@kalele.io.com limahana#kalele
+generate_user vlingo-internal system@kalele.io.com Limahana#Kalele
