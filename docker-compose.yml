@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+  keycloak:
+    image: jboss/keycloak
+    container_name: vlingo-auth
+    restart: always
+    environment:
+      DB_VENDOR: h2
+      DB_USER: keycloak
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: kalele#luna
+    ports:
+      - "8080:8080"
